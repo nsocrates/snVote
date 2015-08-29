@@ -66,6 +66,10 @@ h3 {
     font-weight: 300;
 }
 
+.share {
+    margin-top: 20px;
+}
+
 .hero-unit {
     position: relative;
     padding: 60px 15px;
