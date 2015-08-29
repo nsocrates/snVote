@@ -75,20 +75,3 @@ exports.destroy = function(req, res) {
 function handleError(res, err) {
   return res.status(500).send(err);
 }
-
-// Sample data
-Poll.find({name:'server', name_id: 'test'}).remove(function() {
-  Poll.create({
-    name: 'server',
-    name_id: 'test',
-    question: 'My name is',
-    options: [['What?', 1], ['Who?', 2,], ['Slim Shady', 5]],
-    create_at: 1440441278927
-  }, {
-    name: 'server',
-    name_id: 'test',
-    question: 'Coke or Pepsi?',
-    options: [['Coke', 1], ['Pepsi', 1]],
-    create_at: 1440529334472
-  });
-});

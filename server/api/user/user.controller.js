@@ -99,17 +99,3 @@ exports.me = function(req, res, next) {
 exports.authCallback = function(req, res, next) {
   res.redirect('/');
 };
-
-// Sample accounts
-User.create({
-  provider: 'local',
-  name: 'Test User',
-  email: 'test@test.com',
-  password: 'test'
-}, {
-  provider: 'local',
-  role: 'admin',
-  name: 'Admin',
-  email: 'admin@admin.com',
-  password: 'admin123'
-});
