@@ -20,7 +20,6 @@ angular.module('testApp')
 
     $scope.select = function(i) {
     	index = i;
-    }
     };
 
     $scope.vote = function() {
@@ -64,7 +63,6 @@ angular.module('testApp')
 		chart.draw(data, options);
 		}
 
-    }
     };
 
   });
