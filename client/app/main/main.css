@@ -15,11 +15,14 @@ a:focus {
     color: #EE6E73;
 }
 
-h1 {
+h1,
+.page-header,
+.poll-quesetion {
     font-weight: 300;
     color: #EE6E73;
 }
 
+h2,
 h4 {
     font-weight: 400;
     color: rgba(0, 0, 0, 0.71);
@@ -30,8 +33,6 @@ h3 {
 }
 
 .poll-question {
-    font-weight: 300;
-    color: #EE6E73;
     margin: 0;
     font-size: 21px;
 }
@@ -71,11 +72,6 @@ h3 {
     color: #F5F5F5;
     text-align: center;
     background: #EE6E73;
-}
-
-.page-header {
-    font-weight: 300;
-    color: #EE6E73;
 }
 
 .footer {
@@ -176,17 +172,14 @@ input[type="checkbox"] {
     box-shadow: none;
 }
 
-.has-success .form-control {
-    border-color: #00C853;
-    box-shadow: none;
-}
-
+.has-success .form-control,
 .has-success .form-control:focus {
     border-color: #00C853;
     box-shadow: none;
 }
 
-.has-error .form-control {
+.has-error .form-control,
+.has-error .form-control:focus {
     border-color: #D50000;
     box-shadow: none;
 }
@@ -198,11 +191,6 @@ input[type="checkbox"] {
 .has-error .radio-inline,
 .has-error .checkbox-inline {
     color: #D50000;
-}
-
-.has-error .form-control:focus {
-    border-color: #D50000;
-    box-shadow: none;
 }
 
 .btn-lg {
@@ -258,10 +246,7 @@ input[type="checkbox"] {
   outline: none;
 }
 
-.btn-animation {
-    transition: all 0.2s ease-in-out;
-}
-
+.btn-animation,
 .btn-animation:hover {
     transition: all 0.2s ease-in-out;
 }
