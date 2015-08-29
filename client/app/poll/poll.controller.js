@@ -54,8 +54,8 @@ angular.module('testApp')
 			fontSize: 14,
 			chartArea: {width: '90%', height: '90%'},
 			legend: {alignment: 'center'},
-			width: 300,
-			height: 240,
+			width: 400,
+			height: 300,
 			sliceVisibilityThreshold: 0
 		};
 
