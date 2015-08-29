@@ -23,6 +23,7 @@ angular.module('testApp')
 
     $scope.vote = function() {
     	$scope.polls.options[index][1] += 1;
+    	$scope.total += 1;
     	$http.put('/api/polls/' + id, $scope.polls);
     };
 
