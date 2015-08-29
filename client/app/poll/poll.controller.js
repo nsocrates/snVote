@@ -10,6 +10,14 @@ angular.module('testApp')
         $scope.polls = polls;
     });
 
+    $scope.getTotal = function() {
+    	var total = 0;
+    	for (var i = 0; i < $scope.polls.options.length; i++) {
+    		total += $scope.polls.options[i][1];
+    	}
+    	return total;
+    };
+
     $scope.select = function(i) {
     	index = i;
     }
