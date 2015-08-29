@@ -5,17 +5,16 @@ angular.module('testApp')
 
   	var id = $routeParams.id;
   	var index = 0;
+  	$scope.total = 0;
 
     $http.get('/api/polls/' + id).success(function(polls) {
         $scope.polls = polls;
     });
 
     $scope.getTotal = function() {
-    	var total = 0;
     	for (var i = 0; i < $scope.polls.options.length; i++) {
-    		total += $scope.polls.options[i][1];
+    		$scope.total += $scope.polls.options[i][1];
     	}
-    	return total;
     };
 
     $scope.select = function(i) {
@@ -28,6 +27,7 @@ angular.module('testApp')
     };
 
     $scope.showResults = function() {
+    	$scope.getTotal();
 
 		// Load the Visualization API and the piechart package.
 		google.load('visualization', '1.0', {
