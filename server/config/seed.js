@@ -3,7 +3,7 @@
  * to disable, edit config/environment/index.js, and set `seedDB: false`
  */
 
-'use strict';
+// 'use strict';
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
@@ -20,8 +20,10 @@ Poll.find({}).remove(function() {
     name: 'server',
     name_id: 'test',
     question: 'Coke or Pepsi?',
-    options: [['Coke', 6], ['Pepsi', 1]],
+    options: [['Coke', 1], ['Pepsi', 1]],
     create_at: 1440529334472
+  }, function() {
+      console.log('sample poll data created');
   });
 });
 
@@ -39,6 +41,5 @@ User.find({}).remove(function() {
     password: 'admin'
   }, function() {
       console.log('finished populating users');
-    }
-  );
+  });
 });
