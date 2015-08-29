@@ -4,7 +4,6 @@ angular.module('testApp')
   .directive('snAdd', function () {
     return {
       restrict: 'EA',
-      link: function (scope, element, attrs) {
       	element.bind('click', function() {
       		var el = angular.element(document.getElementById('optionAnchor'));
       		var form = "<div class='form-group'>"+
