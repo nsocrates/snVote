@@ -1,0 +1,35 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class='hero-unit top-50 banner'>
+	<div class='container'>
+		<div class='row'>
+			<div class="col-sm-12">
+				<h1>All Polls</h1>
+				<p class='lead'>View all polls.</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class='container top-15'>
+	<div class='row'>
+		<div class='col-sm-12' ng-hide='showMe'>
+
+			<p class='lead text-center' ng-hide='polls.length'><span class='secondary'>
+				Looks like there aren't any polls.</span>
+				<a href="/dashboard">
+					Go ahead and create one!</a></p>
+
+			<ul class='list-group'>
+				<li class='list-group-item' ng-repeat='poll in polls | orderBy: "create_on": true'>
+					<a class='poll-question' ng-href='/poll/{{poll._id}}' href="#">{{poll.question}}</a><br/>
+					<a ng-show='isAdmin()' ng-click='delete(poll)' href='#'>
+						<span class="glyphicon glyphicon-trash pull-right poll-question"></span></a>
+					<small class='text-muted'>
+						Created at: {{poll.create_at | date: 'h:mma on MMM, d, y'}} by {{poll.name}}</small>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</div>

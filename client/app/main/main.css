@@ -1,0 +1,281 @@
+.thing-form {
+    margin: 20px 0;
+}
+
+body {
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: black;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #EE6E73;
+}
+
+h1 {
+    font-weight: 300;
+    color: #EE6E73;
+}
+
+h4 {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.71);
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.poll-question {
+    font-weight: 300;
+    color: #EE6E73;
+    margin: 0;
+    font-size: 21px;
+}
+
+.banner {
+    border-bottom: none;
+}
+
+.banner h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 300;
+    color: white;
+}
+
+.secondary {
+    opacity: 0.71;
+}
+
+.top-50 {
+    margin-top: 50px;
+}
+
+.top-15 {
+    margin-top: 15px;
+    padding-bottom: 50px;
+}
+
+.lead {
+    font-weight: 300;
+}
+
+.hero-unit {
+    position: relative;
+    padding: 60px 15px;
+    color: #F5F5F5;
+    text-align: center;
+    background: #EE6E73;
+}
+
+.page-header {
+    font-weight: 300;
+    color: #EE6E73;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 70px;
+    background-color: rgba(204, 68, 75, 0.91);
+}
+
+.footer > .container > p {
+    color: rgba(255, 255, 255, 0.87);
+    margin: 0;
+}
+
+.footer > .container > p > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.footer > .container > p > a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+label {
+    font-weight: 300;
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.71);
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    margin: 4px 10px 0 0;
+}
+
+.glyphicon.glyphicon-trash {
+    top: -12px;
+    color: #EE6E73;
+    line-height: 16.8px;
+}
+
+.fa {
+    color: #EE6E73;
+    margin: 0.5em 0 0;
+}
+
+.fa-times-circle {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.fa-times-circle:hover,
+.glyphicon-trash:hover {
+    color: #FB898F;
+}
+
+.pollOptions {
+    margin: 10px 0;
+}
+
+.hover {
+    background: rgba(231, 231, 231, 0.38);
+}
+
+.itemDisplayed {
+    background: rgba(231, 231, 231, 0.26);
+}
+
+.list-group-item,
+.list-group-item:first-child,
+.list-group-item:last-child {
+    border-radius: 0;
+}
+
+.form-poll {
+    padding-right: 40px;
+    font-size: 16px;
+}
+
+.form-group:first-child .form-poll {
+    padding: 40px 12px;
+    font-size: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-control {
+    border-color: rgba(0, 0, 0, 0.38);
+    border-radius: 0;
+}
+
+.form-control:focus,
+.form-control:hover {
+    border-color: rgba(0, 0, 0, 0.71);
+    box-shadow: none;
+}
+
+.has-success .form-control {
+    border-color: #00C853;
+    box-shadow: none;
+}
+
+.has-success .form-control:focus {
+    border-color: #00C853;
+    box-shadow: none;
+}
+
+.has-error .form-control {
+    border-color: #D50000;
+    box-shadow: none;
+}
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+    color: #D50000;
+}
+
+.has-error .form-control:focus {
+    border-color: #D50000;
+    box-shadow: none;
+}
+
+.btn-lg {
+    border-radius: 0;
+}
+
+.btn-xlg {
+    padding: 15px 40px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 0;
+}
+
+.btn-default {
+    color: white;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.87);
+    font-weight: 300;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+    color: rgba(0, 0, 0, 0.71);
+    border-color: white;
+    background-color: white;
+    box-shadow: none;
+}
+
+.btn-primary,
+.btn-primary:focus {
+    color: white;
+    background-color: #EE6E73;
+    border: none;
+    font-weight: 300;
+}
+
+.btn-primary:hover {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #FB898F;
+}
+
+.btn-primary:active {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #FF5059;
+    box-shadow: none;
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.btn-animation {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-animation:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .btn-blk {
+        display: block;
+        width: 100%;
+    }
+    .btn-blk + .btn-blk {
+        margin-top: 5px;
+    }
+}
+
+#chart_div > div > div:nth-child(1) {
+    margin: 0 auto;
+}

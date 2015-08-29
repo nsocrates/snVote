@@ -1,0 +1,74 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class='hero-unit top-50 banner'>
+	<div class='container'>
+		<div class='row'>
+			<div class="col-sm-12">
+				<h1>Dashboard</h1>
+				<p class='lead'>This is the dashboard view.</p>
+			</div>
+			<a class='btn btn-default btn-lg btn-blk' href='' ng-class='{active: showMe}' ng-click='showMe=true'>
+				New Poll</a>
+			<a class='btn btn-default btn-lg btn-blk' href='' ng-class='{active: !showMe}' ng-click='showMe=false'>
+				My Polls</a>
+		</div>
+	</div>
+</header>
+
+<div class='container top-15'>
+	<div class='row'>
+		<!-- Create new poll -->
+		<div class='col-sm-12' ng-show='showMe'>
+			<form class='form' name='form' ng-Submit='create(form)' novalidate>
+				<div id='optionAnchor'>
+					
+					<div class='form-group' ng-class="{'has-error': form.question.$invalid && submitted}">
+						<input type="text" name='question' class='form-control form-poll' placeholder='Type your question here' ng-model='newPoll.question'
+							required/>
+						<p class="help-block" ng-show="form.question.$error.required && submitted">
+							Please enter a question.</p>
+					</div>
+
+					<div class='form-group' ng-class="{'has-error': form.option0.$invalid && submitted}">
+						<input type="text" name='option0' class='form-control form-poll form-option' placeholder='Enter option' ng-model='newPoll.options[0][0]'
+							required/>
+						<p class="help-block" ng-show="form.option0.$error.required && submitted">
+							This field is required.</p>
+					</div>
+
+					<div class='form-group' ng-class="{'has-error': form.option1.$invalid && submitted}">
+						<input type="text" name='option1' class='form-control form-poll form-option' placeholder='Enter option' ng-model='newPoll.options[1][0]'
+							required/>
+						<p class="help-block" ng-show="form.option1.$error.required && submitted">
+							This field is required.</p>
+					</div>
+
+				</div>
+				<a sn-add class='btn btn-primary btn-lg btn-blk' href="#">
+					Add Option</a>
+				<button class='btn btn-primary btn-lg btn-blk' href="#">
+					Create Poll</button>
+			</form>
+		</div>
+
+		<!-- View your polls -->
+		<div class='col-sm-12' ng-hide='showMe'>
+
+			<p class='lead text-center' ng-hide='polls.length'><span class='secondary'>
+				Looks like you don't have any polls.</span>
+				<a href="#" ng-class='{active: showMe}' ng-click='showMe=true'>
+					Go ahead and create one!</a></p>
+
+			<ul class='list-group'>
+				<li class='list-group-item' ng-repeat='poll in polls | orderBy: "create_on": true'>
+					<a class='poll-question' href='/poll/{{poll._id}}'>{{poll.question}}</a><br/>
+					<a ng-click='delete(poll)' href='#'>
+						<span class="glyphicon glyphicon-trash pull-right poll-question"></span></a>
+					<small class='text-muted'>
+						Created at: {{poll.create_at | date: 'h:mma on MMM, d, y'}} by {{poll.name}}</small>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</div>

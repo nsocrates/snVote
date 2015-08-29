@@ -1,0 +1,31 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class='hero-unit top-50 banner'>
+	<div class='container'>
+		<div class='row'>
+			<div class="col-sm-12">
+				<h1>{{polls.question}}</h1>
+				<p class='lead secondary'>Created at: {{polls.create_at | date: 'h:mma on MMM, d, y'}} by {{polls.name}}</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class='container top-15'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<form class='form' name='form' ng-submit='vote()' ng-hide='showMe'>
+				<ul class='list-group'>
+					<li class='list-group-item' ng-repeat='option in polls.options'>
+						<label for='options'>
+							<input type='radio' name='radioOptions' ng-click='select($index)'/>{{option[0]}}
+						</label>
+					</li>
+				</ul>
+				<button class='btn btn-primary btn-lg btn-blk' href="#" ng-click='showMe=true; showResults()'>Submit</button>
+				<a class='btn btn-primary btn-lg btn-blk' href="#" ng-click='showMe=true; showResults()'>Results</a>
+			</form>
+			<div id='chart_div' ng-show='showMe'></div>
+		</div>
+	</div>
+</div>
