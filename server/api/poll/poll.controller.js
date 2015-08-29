@@ -16,7 +16,6 @@ var Poll = require('./poll.model');
 exports.index = function(req, res) {
   Poll.find(function (err, polls) {
     if(err) { return handleError(res, err); }
-    console.log('Found ' + polls);
     return res.status(200).json(polls);
   });
 };
@@ -78,16 +77,18 @@ function handleError(res, err) {
 }
 
 // Sample data
-Poll.create({
-  name: 'server',
-  name_id: 'test',
-  question: 'My name is',
-  options: [['What?', 1], ['Who?', 2,], ['Slim Shady', 5]],
-  create_at: 1440441278927
-}, {
-  name: 'server',
-  name_id: 'test',
-  question: 'Coke or Pepsi?',
-  options: [['Coke', 1], ['Pepsi', 1]],
-  create_at: 1440529334472
+Poll.find({name:'server', name_id: 'test'}).remove(function() {
+  Poll.create({
+    name: 'server',
+    name_id: 'test',
+    question: 'My name is',
+    options: [['What?', 1], ['Who?', 2,], ['Slim Shady', 5]],
+    create_at: 1440441278927
+  }, {
+    name: 'server',
+    name_id: 'test',
+    question: 'Coke or Pepsi?',
+    options: [['Coke', 1], ['Pepsi', 1]],
+    create_at: 1440529334472
+  });
 });
