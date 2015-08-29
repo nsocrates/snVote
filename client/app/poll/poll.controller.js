@@ -48,8 +48,7 @@ angular.module('testApp')
 
 		// Set chart options
 		var options = {
-			//colors: ['#e94047', '#eb575d', '#EE6E73', '#f18589', '#f39c9f'],
-			colors: ['#F44336', '#E91E63', '#9C27B0', '#03A9F4', '#4CAF50'],
+			colors: ['#F06292', '#BA68C8', '#7986CB', '#9575CD', '#E57373'],
 			fontName: 'Roboto',
 			fontSize: 14,
 			chartArea: {width: '90%', height: '90%'},
