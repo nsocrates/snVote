@@ -20,12 +20,12 @@ angular.module('testApp')
     // Sync $scope with database; get polls created by current user
     $http.get('/api/polls/' + name + '/' + name_id).success(function(polls) {
         $scope.polls = polls;
-    })
+    });
 
     // Do stuff when user clicks submit button
     $scope.create = function(form) {
         $scope.submitted = true;
-        if (form.$valid) $scope.populate();
+        if (form.$valid) { $scope.populate(); }
     };
 
     // Populate newPoll; push to $scope.polls
@@ -47,7 +47,7 @@ angular.module('testApp')
 
         // Add ID to current poll
         $http.post('/api/polls', $scope.newPoll).success(function(pollWithId) {
-            $scope.polls.pop()
+            $scope.polls.pop();
             $scope.polls.push(pollWithId);
             // Redirect to poll page
             $location.path('/poll/' + pollWithId._id);
@@ -61,7 +61,7 @@ angular.module('testApp')
     $scope.delete = function(poll) {
         $http.delete('/api/polls/' + poll._id);
         angular.forEach($scope.polls, function(p, index) {
-            if (p === poll) { $scope.polls.splice(index, 1) };
+            if (p === poll) { $scope.polls.splice(index, 1); }
         });
     };
 

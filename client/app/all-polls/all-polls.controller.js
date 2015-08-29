@@ -11,7 +11,7 @@ angular.module('testApp')
     $scope.delete = function(poll) {
         $http.delete('/api/polls/' + poll._id);
         angular.forEach($scope.polls, function(p, index) {
-            if (p === poll) { $scope.polls.splice(index, 1) };
+            if (p === poll) { $scope.polls.splice(index, 1); }
         });
     };
   });

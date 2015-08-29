@@ -21,6 +21,7 @@ angular.module('testApp')
     $scope.select = function(i) {
     	index = i;
     }
+    };
 
     $scope.vote = function() {
     	$scope.polls.options[index][1] += 1;
@@ -64,5 +65,6 @@ angular.module('testApp')
 		}
 
     }
+    };
 
   });

@@ -16,7 +16,7 @@ angular.module('testApp')
     //Display dashboard if logged in
     $scope.isLoggedInAsync = Auth.isLoggedInAsync;
     $scope.isLoggedInAsync(function(loggedIn) {
-      if(loggedIn) $scope.menu = [{'title': 'Dashboard', 'link': '/dashboard'}];
+      if(loggedIn) { $scope.menu = [{'title': 'Dashboard', 'link': '/dashboard'}]; }
     });
 
     $scope.logout = function() {
