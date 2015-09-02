@@ -74,6 +74,16 @@ h3 {
     background: #EE6E73;
 }
 
+.bg {
+    padding: 160px 15px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: url('bg.png') no-repeat center center fixed;
+    width: 100%;
+    background-size: cover;
+}
+
 .footer {
     text-align: center;
     padding: 15px 0;
