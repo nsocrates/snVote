@@ -28,6 +28,11 @@ h3 {
     font-weight: 500;
 }
 
+code {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
 .poll-question {
     margin: 0;
     font-size: 21px;
@@ -73,26 +78,6 @@ h3 {
     color: #F5F5F5;
     text-align: center;
     background: #EE6E73;
-}
-
-.bg {
-    padding: 160px 15px;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    background: url('http://oi60.tinypic.com/s0ve50.jpg') no-repeat center center fixed;
-    width: 100%;
-    background-size: cover;
-    position: fixed;
-    z-index: 1;
-}
-
-.content-wrapper {
-    position: absolute;
-    z-index: 2;
-    top: 575px;
-    background: white;
-    width: 100%;
 }
 
 .footer {
@@ -280,6 +265,21 @@ input[type="checkbox"] {
     .btn-blk + .btn-blk {
         margin-top: 5px;
     }
+}
+
+.chart-wrapper {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+#chart_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
 }
 
 #chart_div > div > div:nth-child(1) {

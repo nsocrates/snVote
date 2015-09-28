@@ -25,9 +25,9 @@
 				<button class='btn btn-primary btn-lg btn-blk' href="#" ng-click='showMe=true; showResults()'>Submit</button>
 				<a class='btn btn-primary btn-lg btn-blk' href="#" ng-click='showMe=true; showResults()'>Results</a>
 			</form>
-			<div id='chart_div' ng-show='showMe'></div>
+			<div class='chart-wrapper'> <div id='chart_div' ng-show='showMe'></div></div>
 			<h2 class='text-center' ng-show='showMe'>{{total}} total votes</h2>
-			<p class='share secondary'>This poll is available at: <code>https://snvote.herokuapp.com/poll/{{polls._id}}</code></p>
+			<p class='share secondary'>This poll is available at: <br/><code>https://snvote.herokuapp.com/poll/{{polls._id}}</code></p>
 		</div>
 	</div>
 </div>
